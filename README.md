@@ -7,4 +7,4 @@ The user is also able to view any of the posts.<br>
 There is also a comments system with which any user can comment on any of the posts.<br>
 2)Admin:<br>
 The admin is able to create a post,edit a post and delete a post.<br>
-The admin can also view all.<br>
+The admin can also view all the posts.<br>
