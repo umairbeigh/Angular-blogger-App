@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Comments</h3>
+        <div class="comments-list" ng-repeat="comment in comments | orderBy:'-commentDate'">
+            <div class="comment">{{comment.content}}</div>
+            <div class="info">
+                By:<span>{{comment.commentBy}}</span><br>
+                On:<span>{{comment.commentDate | date:'medium'}}</span>
+            </div>
+            <br>
+        </div>
+        <br>
+        <hr>
+        <textarea class="form-control" rows="5" cols="40" ng-model="comment.content" placeholder="Type your comment here"></textarea>
+        <br> By:
+        <input type="text" class="form-control" ng-model="comment.author" placeholder="Type your name here">
+        <br>
+        <input type="submit" ng-click="saveComment()" value="Add" class="form-cintrol btn-success small-button">
+
+    </div>
+</div>

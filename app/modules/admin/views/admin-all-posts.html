@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-8">
+        <table class="table">
+            <tr>
+                <td>
+                    <h3>View All Posts</h3></td>
+                <td></td>
+            </tr>
+            <tr ng-repeat="blog in blogs track by $index ">
+                <td>{{blog.title}}</td>
+                <td>
+                    <a class="btn btn-primary" ui-sref="admin.postUpdate({id:blog.id})">Edit</a>
+                    <a class="btn btn-danger" ng-click="deletePost(blog.id)">Delete</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

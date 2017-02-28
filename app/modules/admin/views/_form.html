@@ -1,0 +1,33 @@
+<div class="form-group" ng-class="{'has-error':PostForm.title.$dirty && PostForm.title.$invalid}">
+    <label for="title" class="col-sm-2 control-label">Post Title</label>
+    <div class="col-sm-10">
+        <input type="text" name="title" ng-model="post.title" ng-required="true" class="form-control" id="title" placeholder="Title">
+        <span class="error-message" ng-show="PostForm.title.$dirty && PostForm.title.$invalid">Title is mandatory</span>
+    </div>
+</div>
+<div class="form-group" ng-class="{'has-error':PostForm.content.$dirty && PostForm.content.$invalid}">
+    <label for="content" class="col-sm-2 control-label">Content</label>
+    <div class="col-sm-10">
+        <textarea cols="8" rows="6" name="content" ng-model="post.content" ng-required="true" class="form-control" id="content" placeholder="Content"></textarea>
+        <span class="error-message" ng-show="PostForm.content.$dirty && PostForm.content.$invalid">Content is mandatory</span>
+    </div>
+</div>
+<div class="form-group" ng-class="{'has-error':PostForm.tags.$dirty && PostForm.tags.$invalid}">
+    <label for="tags" class="col-sm-2 control-label">Tags</label>
+    <div class="col-sm-10">
+        <input type="text" name="tags" ng-model="post.tags" ng-pattern="/^[\w,]+$/" class="form-control" id="tags" placeholder="Comma seperated tags">
+        <span class="error-message" ng-show="PostForm.tags.$dirty && PostForm.tags.$invalid">No Special Characters Allowed</span>
+    </div>
+</div>
+<div class="form-group" ng-class="{'has-error':PostForm.keywords.$dirty && PostForm.keywords.$invalid}">
+    <label for="keywords" class="col-sm-2 control-label">KeyWords</label>
+    <div class="col-sm-10">
+        <input type="text" name="keywords" ng-model="post.keywords" ng-pattern="/^[\w,]+$/" class="form-control" id="keywords" placeholder="Comma seperated keywords">
+        <span class="error-message" ng-show="PostForm.keywords.$dirty && PostForm.keywords.$invalid">No Special Characters Allowed</span>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success" ng-disabled="PostForm.$invalid">{{buttonText}}</button>
+    </div>
+</div>
